@@ -1,4 +1,4 @@
-import scraper, datetime, post_application
+import scraper, datetime, post_application, time
 
 sesh = scraper.Site_Session()
 
@@ -11,5 +11,5 @@ while True:
 		for application in applications:
 			print(application)
 			post_application.post_application(application)
-	sleep(60*60*23) # Sleep for almost a day, to make sure we do run every day.
-
+	print("Sleeping")
+	time.sleep(60*60*23) # Sleep for almost a day, to make sure we do run every day.
